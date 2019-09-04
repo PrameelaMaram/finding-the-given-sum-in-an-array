@@ -1,0 +1,25 @@
+
+#include<stdio.h>
+void main()
+{
+
+    int a[100],n,i,j,sum;
+    printf("enter the nu of elements");
+    scanf("%d",&n);
+    printf("enter the elements");
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("enter the sum to search");
+    scanf("%d",&sum);
+    for(i=0;i<n;i++)
+    {
+        for(j=i;j<n;j++) //j=0 ->2+3=5 and 3+2=5....2 times
+        {
+            if(i!=j)
+            {
+                if(a[i]+a[j]==sum)
+                    printf("\nthe sum of %d and %d is %d ",a[i],a[j],sum);
+            }
+        }
+    }
+}
